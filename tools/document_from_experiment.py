@@ -23,7 +23,7 @@ import datetime
 import markdown
 import json2html
 
-from rspace_client.eln.eln import ELNClient
+from rspace_client import ELNClient
 from pathlib import Path
 from typing import Union, Dict, Iterable
 from tabulate import tabulate

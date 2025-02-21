@@ -4,10 +4,24 @@
 """
 Create a document on RSpace.
 
-Either add the text in this code () or pass a markdown or json file as input to convert them to html syntax and add them to RSpace.
+Either add text directly in this code (see line 13) or pass a markdown or json file as input to convert them to html syntax and add them to RSpace.
 
 @author: Emil Frang Christiansen (emil.christiansen@ntnu.no)
 Created 2025-01-16
+"""
+
+DEFAULT_TEXT = f"""
+<h1>My First API Document </h1>
+<p>
+This is a document that was created with the Python API of RSpace.
+I can put HTML code here to e.g. <em>emphasize</em> text or put them in <strong>bold</strong>.
+I can also add lists that are useful for
+<ul>
+<li>Organizing my thoughts</li>
+<li>Listing results</li>
+<li>Remembering stuff</li>
+</ul>
+</p>
 """
 
 import argparse
@@ -17,7 +31,7 @@ from typing import List, Union
 import markdown
 import json2html
 
-from rspace_client.eln.eln import ELNClient
+from rspace_client import ELNClient
 
 
 def create_document(
@@ -144,10 +158,7 @@ if __name__ == "__main__":
     client = ELNClient(args.rspace_url, api_key)
 
     if args.source is None:
-        text = ""  # Enter text of document here.
-
-        # Example text:
-        # text = "<h1> My First API Document </h1><p>This is a document that was created with the Python API of RSpace. I can put HTML code here to e.g. <em>emphasize</em> text or put them in <strong>bold</strong>. I can also add lists that are useful for <ul><li>Organizing my thoughts</li><li>Listing results</li><li>Remembering stuff</li></ul>"
+        text = DEFAULT_TEXT
     else:
         text = args.source.read_text()
         if args.source.suffix == ".md":
