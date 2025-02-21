@@ -1,0 +1,14 @@
+rspace-client==2.5.0
+tabulate
+jupyter
+jupyterlab
+matplotlib
+numpy<2.0.0
+scipy
+markdown
+json2html
+pymdown-extensions
+seaborn
+pandas
+pyqt
+qtpy
