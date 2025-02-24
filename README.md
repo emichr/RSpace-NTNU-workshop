@@ -34,23 +34,26 @@ In order to use the API through python, you will need to do some preparations fi
 
 ### Setting up environment
 
-Create a new environment for _pure_ RSpace use through conda:
+Create a new environment for _"pure"_ RSpace use through conda (but use pip for rspace):
 
 ```bash
-conda create -n RSpace -c conda-forge rspace_client=2.5.0 tabulate jupyter jupyterlab matplotlib numpy scipy markdown json2html pymdown-extensions seaborn pandas pyqt qtpy
+conda create -n RSpace pip tabulate jupyter jupyterlab matplotlib numpy scipy markdown json2html pymdown-extensions seaborn pandas pyqt qtpy
+conda activate RSpace
+pip install rspace_client==2.5.0 
 ```
 
-#### Pip
+#### With hyperspy/pyxem
 
-The RSpace client can also be installed through pip:
+If you want an environment with the hyperspy and pyxem packages as well:
 
 ```bash
-conda create -n RSpace pip pyxem=0.19.1 hyperspy hyperspy-gui-traitsui hyperspy-gui-ipywidgets tabulate jupyter jupyterlab matplotlib numpy<2.0.0 scipy markdown json2html pymdown-extensions seaborn pandas pyqt qtpy
+conda create -n RSpace pip pyxem=0.20.0 hyperspy hyperspy-gui-traitsui hyperspy-gui-ipywidgets tabulate jupyter jupyterlab matplotlib numpy scipy markdown json2html pymdown-extensions seaborn pandas pyqt qtpy
 conda activate RSpace
 pip install rspace_client==2.5.0
 ```
 
 ### API Key
+
 Next, you need to get your API key from RSpace. Your API key is _equivalent_ to a password, and should be treated as a secret. A few key points to remember is:
 
 - __NEVER__ share your API key
