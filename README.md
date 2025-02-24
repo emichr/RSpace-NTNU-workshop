@@ -34,12 +34,20 @@ In order to use the API through python, you will need to do some preparations fi
 
 ### Setting up environment
 
-Create a new environment for _"pure"_ RSpace use through conda (but use pip for rspace):
+Create a new environment for _pure_ RSpace through conda (but use pip for rspace):
 
 ```bash
-conda create -n RSpace pip tabulate jupyter jupyterlab matplotlib numpy scipy markdown json2html pymdown-extensions seaborn pandas pyqt qtpy
+conda create -n RSpace pip
 conda activate RSpace
 pip install rspace_client==2.5.0 
+```
+
+The code in this repository will also need some other packages, so the following should create an environment for you (in your terminal, navigate to where `requirements.txt` is located before running the commands):
+
+```bash
+conda create -n RSpace pip
+conda activate RSpace
+pip install -r requirements.txt
 ```
 
 #### With hyperspy/pyxem
