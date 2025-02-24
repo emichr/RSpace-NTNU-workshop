@@ -22,6 +22,15 @@ I can also add lists that are useful for
 <li>Remembering stuff</li>
 </ul>
 </p>
+
+<h2>Linking to stuff on RSpace</h2>
+<p>
+I can link to stuff on RSpace by including a reference to an item like this: `&lt;fileId=...&gt;`.
+Linking to an image will display that image straight away, like for this image: <fileId=3099>
+I can also link to other documents: <fileId=2921>.
+
+Of course, this all requires you to know the file IDs of your stuff on RSpace, but you can always find those pretty easily through the web based solution, or by grabbing them through the API (alhtough this might require some dedicated way of managing your stuff on RSpace.).
+</p>
 """
 
 import argparse
