@@ -27,8 +27,6 @@ Use of the API through python depends on the `rspace_client==2.5.0` package foun
 - pymdown-extensions
 - seaborn
 - pandas
-- pyqt
-- qtpy
 
 ## Preparations
 
